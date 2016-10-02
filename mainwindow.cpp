@@ -140,7 +140,9 @@ void MainWindow::on_actionStart_triggered()
 void MainWindow::on_imageList_itemClicked(QListWidgetItem *item)
 {
     QPixmap pix(ui->imageList->currentItem()->text());
+    if(ui->label->maximumHeight() < ui->label->maximumWidth())
     pix = pix.scaledToWidth(ui->label->maximumWidth());
+    else pix = pix.scaledToHeight(ui->label->maximumHeight());
     ui->label->setPixmap(pix);
 
 }
