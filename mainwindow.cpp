@@ -48,10 +48,10 @@ void MainWindow::on_actionStart_triggered()
     // Jeżeli nie ma plików na licie - komunikat
     if (this->ui->imageList->count() == 0)
     {
-        QMessageBox::warning(this, "Bład", "Proszę wybrać conajmniej jeden plik z obrazem.", QMessageBox::Ok, NULL);
+        QMessageBox::warning(this, "Błąd", "Brak plików do analizy.", QMessageBox::Ok);
         return;
     }
-    // Zdeklarowane QString zapisuje w katalogu wyjciowy
+    // Zdeklarowane QString zapisuje w katalogu wyjściowy
     QString outputDir;
 /*
     // Jeli dirCheckBox (katalog wyjciowy taki sam jak wejciowy) nie jest ustawiony, ustawia to co jest wpisane w outputDirTextBox->text()
@@ -137,7 +137,7 @@ void MainWindow::on_actionStart_triggered()
     this->setEnabled(true);
 }
 
-void MainWindow::on_imageList_itemClicked(QListWidgetItem *item)
+void MainWindow::on_imageList_itemClicked()
 {
     QPixmap pix(ui->imageList->currentItem()->text());
     if(ui->label->maximumHeight() < ui->label->maximumWidth())

@@ -21,7 +21,7 @@ private slots:
 
     void on_actionStart_triggered();
 
-    void on_imageList_itemClicked(QListWidgetItem *item);
+    void on_imageList_itemClicked();
 
 private:
     Ui::MainWindow *ui;

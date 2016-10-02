@@ -3,5 +3,6 @@
         <file>icon/add-3.png</file>
         <file>icon/play-button.png</file>
         <file>icon/focus.png</file>
+        <file>icon/view.png</file>
     </qresource>
 </RCC>
